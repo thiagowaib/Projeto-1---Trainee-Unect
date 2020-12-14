@@ -1,0 +1,214 @@
+/* Media Query de Range 0-768px */
+@media only screen and (max-width: 768px) {
+  /* Header */
+  .header {
+    width: 100%;
+    height: 54px;
+    padding: 32px 0;
+    background: rgba(255, 253, 253, 0);
+    z-index: 2;
+  }
+
+  .header h1 {
+    display: inline-block;
+    font-size: 16px;
+    position: absolute;
+    top: 24px;
+    margin-left: 4px;
+  }
+  .header h1:before {
+    content: "";
+    display: inline;
+    border: 1px solid rgb(0, 0, 0);
+    margin: auto 5px;
+  }
+
+  .header_menu {
+    width: 120px;
+    height: 20px;
+    display: inline-block;
+    margin-left: 80%;
+    position: absolute;
+    top: 24px;
+  }
+
+  .header_menu ul li {
+    display: inline-block;
+    padding: 0 10px;
+    transition: transform 0.2s;
+  }
+
+  .header_menu ul li:hover {
+    transform: scale(1.2);
+  }
+
+  /* ===== */
+
+  /* Sobre Nós */
+  .sobre {
+    width: 100%;
+    margin-top: 100px;
+    padding: 60px 40px;
+  }
+
+  .sobre h1 {
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 40px;
+  }
+
+  .sobre img {
+    height: auto;
+    width: 40%;
+  }
+  .sobre div {
+    height: auto;
+    width: 45%;
+    border: 1px solid #f2f3f4;
+    border-radius: 15px;
+    background: #f2f3f4;
+    margin: -214px 0 0 250px;
+    padding: 30px 20px 20px 40px;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.089);
+  }
+
+  .sobre p {
+    opacity: 0.55;
+    font-size: 14px;
+    font-weight: lighter;
+    line-height: 20px;
+  }
+  /* ======== */
+
+  /* Vagas */
+  .vagas {
+    padding: 30px 0;
+  }
+
+  .vagas h1 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .vagas img {
+    transform: scale(0.8);
+  }
+
+  .vagas li {
+    display: inline-block;
+    padding-right: 5%;
+    padding-top: 40px;
+    vertical-align: top;
+    max-width: 43%;
+  }
+
+  .vagas li h2 {
+    display: inline-block;
+    font-size: 18px;
+    color: #226ed8;
+    padding-bottom: 20px;
+    font-weight: bold;
+    padding-left: 0px;
+  }
+
+  .vagas li h2 span {
+    color: #3f3d5680;
+    padding-left: 7px;
+    font-weight: normal;
+    letter-spacing: 0px;
+  }
+
+  .vagas p {
+    font-size: 14px;
+    font-weight: lighter;
+    line-height: 22px;
+  }
+  /* ===== */
+
+  /* Break - Alumni */
+  .alumni {
+    width: 100%;
+    box-shadow: 0 -1px 1px rgba(128, 128, 128, 0.308);
+    padding: 70px 0;
+    z-index: 2;
+  }
+
+  .alumni h1 {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: bold;
+    padding-bottom: 52px;
+  }
+
+  .alumni img {
+    display: inline-block;
+    padding: 0 12px;
+    max-height: 50px;
+    width: 15%;
+  }
+
+  .alumni img:hover {
+    transition: transform 0.2s;
+    transform: scale(1.2);
+  }
+  /* ============= */
+
+  /* Footer */
+  .footer {
+    width: 100%;
+    background: #171717;
+    padding: 65px 0 130px 0;
+  }
+
+  .footer nav {
+    width: 118px;
+    display: inline-block;
+    margin: 0 40%;
+  }
+
+  .footer ul li {
+    display: inline-block;
+    padding: 0 8px;
+    transition: transform 0.2s;
+  }
+
+  .footer ul li:hover {
+    transform: scale(1.2);
+  }
+
+  .link {
+    display: block;
+    text-decoration: none;
+    color: #fdfdfd;
+    opacity: 0.7;
+    font-size: 15px;
+    line-height: 26px;
+    margin: 30px 0 15px 39%;
+  }
+
+  .icones {
+    width: 100px;
+    display: block;
+    margin-left: 41%;
+    text-align: center;
+  }
+  .icones img {
+    padding: 0 5px;
+  }
+  .contatos {
+    display: block;
+    padding-top: 30px;
+    margin-left: 20%;
+  }
+  .contatos p {
+    color: #fdfdfd;
+    opacity: 0.7;
+    font-size: 15px;
+    line-height: 26px;
+  }
+
+  .contatos p img {
+    padding-bottom: 3px;
+  }
+  /* ===== */
+}
+/* Fim do Media Querie */
