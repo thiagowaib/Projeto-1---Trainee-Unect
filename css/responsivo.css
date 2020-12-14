@@ -1,5 +1,5 @@
-/* Media Query de Range 0-768px */
-@media only screen and (max-width: 768px) {
+/* Media Query de Range 0-500px */
+@media only screen and (max-width: 500px) {
   /* Header */
   .header {
     width: 100%;
@@ -24,17 +24,19 @@
   }
 
   .header_menu {
-    width: 120px;
+    width: 25px;
     height: 20px;
     display: inline-block;
-    margin-left: 80%;
+    margin-left: 240px;
+    margin-top: -35px;
     position: absolute;
     top: 24px;
+    text-align: center;
   }
 
   .header_menu ul li {
     display: inline-block;
-    padding: 0 10px;
+    padding: 5px 0px;
     transition: transform 0.2s;
   }
 
@@ -44,39 +46,120 @@
 
   /* ===== */
 
+  /* Banner */
+
+  .banner_bg {
+    width: 100%;
+    height: 547px;
+    background-color: #226ed8;
+    position: absolute;
+    top: 0;
+    z-index: -2;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.123);
+  }
+  .banner {
+    width: 100%;
+    height: 554px;
+    background: url(../img/banner.jpg) center no-repeat;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+
+  .frases_banner {
+    padding-top: 175px;
+  }
+  .frases_banner h1 {
+    font-size: 28px;
+    line-height: 38px;
+    padding-top: 5px;
+  }
+  .frases_banner h1 span {
+    font-weight: bold;
+  }
+
+  .frases_banner h2 {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+    padding-top: 20px;
+  }
+  .frases_banner h2 span {
+    color: #226ed8;
+    font-weight: bold;
+  }
+  /* ===== */
+
+  /* Botões do Banner */
+  .botoes {
+    margin-top: 300px;
+  }
+
+  .botão-inscrição {
+    background: #226ed8;
+    border: 3px solid #226ed8;
+    border-radius: 25px;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+  }
+
+  .botão-inscrição:hover {
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.445);
+  }
+
+  .botão-edital {
+    padding: 10px 12px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #226ed8;
+  }
+  .botão-edital img {
+    padding-left: 8px;
+  }
+
+  .botão-edital:hover {
+    font-weight: bold;
+  }
+  /* =============== */
   /* Sobre Nós */
   .sobre {
     width: 100%;
+    padding: 60px 0px;
     margin-top: 100px;
-    padding: 60px 40px;
   }
 
   .sobre h1 {
     font-size: 24px;
     font-weight: bold;
     padding-bottom: 40px;
+    padding-left: 30px;
   }
 
   .sobre img {
     height: auto;
-    width: 40%;
+    width: 75%;
+    margin: 0 auto;
+    display: block;
+    border: 1px solid white;
+    border-radius: 10px;
   }
   .sobre div {
+    display: block;
     height: auto;
-    width: 45%;
+    max-width: 66%;
     border: 1px solid #f2f3f4;
-    border-radius: 15px;
+    border-radius: 5px;
     background: #f2f3f4;
-    margin: -214px 0 0 250px;
-    padding: 30px 20px 20px 40px;
+    margin: -20px auto 0 auto;
+    padding: 30px 10px 20px 20px;
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.089);
   }
 
   .sobre p {
     opacity: 0.55;
-    font-size: 14px;
-    font-weight: lighter;
-    line-height: 20px;
+    font-size: 16px;
+    line-height: 22px;
   }
   /* ======== */
 
@@ -88,26 +171,27 @@
   .vagas h1 {
     font-size: 24px;
     font-weight: bold;
+    padding-left: 10px;
   }
   .vagas img {
-    transform: scale(0.8);
+    transform: scale(1);
   }
 
   .vagas li {
     display: inline-block;
-    padding-right: 5%;
-    padding-top: 40px;
+    padding-top: 50px;
     vertical-align: top;
-    max-width: 43%;
+    max-width: 100%;
+    text-align: center;
   }
 
   .vagas li h2 {
     display: inline-block;
-    font-size: 18px;
+    font-size: 22px;
     color: #226ed8;
     padding-bottom: 20px;
     font-weight: bold;
-    padding-left: 0px;
+    padding-left: 5px;
   }
 
   .vagas li h2 span {
@@ -118,6 +202,7 @@
   }
 
   .vagas p {
+    padding: 0 5px;
     font-size: 14px;
     font-weight: lighter;
     line-height: 22px;
@@ -140,10 +225,11 @@
   }
 
   .alumni img {
-    display: inline-block;
-    padding: 0 12px;
+    display: block;
+    padding: 20px 0;
+    margin: 0 auto;
     max-height: 50px;
-    width: 15%;
+    width: 50%;
   }
 
   .alumni img:hover {
@@ -162,7 +248,7 @@
   .footer nav {
     width: 118px;
     display: inline-block;
-    margin: 0 40%;
+    margin: 0 33%;
   }
 
   .footer ul li {
@@ -182,32 +268,34 @@
     opacity: 0.7;
     font-size: 15px;
     line-height: 26px;
-    margin: 30px 0 15px 39%;
+    margin: 30px 0 25px 31%;
   }
 
   .icones {
     width: 100px;
     display: block;
-    margin-left: 41%;
+    margin-left: 34%;
     text-align: center;
   }
   .icones img {
     padding: 0 5px;
   }
   .contatos {
+    margin: 0 auto;
     display: block;
     padding-top: 30px;
-    margin-left: 20%;
   }
   .contatos p {
     color: #fdfdfd;
     opacity: 0.7;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 26px;
+    text-align: center;
   }
 
   .contatos p img {
     padding-bottom: 3px;
+    max-width: 15px;
   }
   /* ===== */
 }
