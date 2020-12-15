@@ -24,6 +24,7 @@
   }
 
   .header_menu {
+    opacity: 0;
     width: 25px;
     height: 20px;
     display: inline-block;
@@ -145,6 +146,7 @@
     border-radius: 10px;
   }
   .sobre div {
+    transition: 0.6s;
     display: block;
     height: auto;
     max-width: 248px;
@@ -178,6 +180,7 @@
   }
 
   .vagas li {
+    transition: 0.2s;
     display: inline-block;
     padding-top: 50px;
     vertical-align: top;
@@ -465,6 +468,7 @@
     border-radius: 10px;
   }
   .sobre div {
+    transition: 0.6s;
     display: block;
     height: auto;
     width: 400px;
@@ -500,6 +504,7 @@
   }
 
   .vagas li {
+    transition: 0.2s;
     display: inline-block;
     padding-top: 50px;
     vertical-align: top;

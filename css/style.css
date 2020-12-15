@@ -50,6 +50,7 @@ body {
   margin-left: 93.2%;
   position: absolute;
   top: 24px;
+  transition: opacity 0.5s;
 }
 
 .header_menu ul li {
