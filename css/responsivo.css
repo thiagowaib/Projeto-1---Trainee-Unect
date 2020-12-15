@@ -1,5 +1,5 @@
 /* Media Query de Range 0-500px */
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 768px) {
   /* Header */
   .header {
     width: 100%;
@@ -138,7 +138,7 @@
 
   .sobre img {
     height: auto;
-    width: 75%;
+    max-width: 278px;
     margin: 0 auto;
     display: block;
     border: 1px solid white;
@@ -147,7 +147,7 @@
   .sobre div {
     display: block;
     height: auto;
-    max-width: 66%;
+    max-width: 248px;
     border: 1px solid #f2f3f4;
     border-radius: 5px;
     background: #f2f3f4;
@@ -246,9 +246,10 @@
   }
 
   .footer nav {
+    position: relative;
     width: 118px;
-    display: inline-block;
-    margin: 0 33%;
+    display: block;
+    margin: 0 auto;
   }
 
   .footer ul li {
@@ -262,28 +263,355 @@
   }
 
   .link {
+    padding-top: 10px;
+    width: 100px;
+    text-align: center;
     display: block;
+    position: relative;
     text-decoration: none;
     color: #fdfdfd;
     opacity: 0.7;
     font-size: 15px;
     line-height: 26px;
-    margin: 30px 0 25px 31%;
+    padding-left: 0;
+    margin: 0 auto;
   }
 
   .icones {
     width: 100px;
+    position: relative;
     display: block;
-    margin-left: 34%;
+    padding-left: 0;
+    left: 0;
+    margin: 0 auto;
     text-align: center;
+    padding-top: 20px;
   }
   .icones img {
     padding: 0 5px;
   }
   .contatos {
+    position: relative;
     margin: 0 auto;
     display: block;
-    padding-top: 30px;
+    padding-top: 20px;
+  }
+  .contatos p {
+    color: #fdfdfd;
+    opacity: 0.7;
+    font-size: 14px;
+    line-height: 26px;
+    text-align: center;
+  }
+
+  .contatos p img {
+    padding-bottom: 3px;
+    max-width: 15px;
+  }
+  /* ===== */
+}
+/* Fim do Media Querie */
+
+/* ================== ==========*/
+/* ================== ==========*/
+/* ================== ==========*/
+/* ================== ==========*/
+/* ================== ==========*/
+/* ================== ==========*/
+/* ================== ==========*/
+/* Media Query de Range 0-500px */
+@media only screen and (min-width: 769px) and (max-width: 1363px) {
+  /* Header */
+  .header {
+    width: 100%;
+    height: 54px;
+    padding: 32px 0;
+    background: rgba(255, 253, 253, 0);
+    z-index: 2;
+  }
+
+  .header h1 {
+    display: inline-block;
+    font-size: 16px;
+    position: absolute;
+    top: 24px;
+    margin-left: 4px;
+  }
+  .header h1:before {
+    content: "";
+    display: inline;
+    border: 1px solid rgb(0, 0, 0);
+    margin: auto 5px;
+  }
+
+  .header_menu {
+    width: 150px;
+    height: 20px;
+    display: inline-block;
+    margin-left: 75%;
+    position: absolute;
+    top: 24px;
+    text-align: center;
+  }
+
+  .header_menu ul li {
+    display: inline-block;
+    padding: 0px 5px;
+    transition: transform 0.2s;
+  }
+
+  .header_menu ul li:hover {
+    transform: scale(1.2);
+  }
+
+  /* ===== */
+
+  /* Banner */
+
+  .banner_bg {
+    width: 100%;
+    height: 547px;
+    background-color: #226ed8;
+    position: absolute;
+    top: 0;
+    z-index: -2;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.123);
+  }
+  .banner {
+    width: 100%;
+    height: 554px;
+    background: url(../img/banner.jpg) center no-repeat;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+
+  .frases_banner {
+    padding-top: 175px;
+  }
+  .frases_banner h1 {
+    font-size: 28px;
+    line-height: 38px;
+    padding-top: 5px;
+  }
+  .frases_banner h1 span {
+    font-weight: bold;
+  }
+
+  .frases_banner h2 {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+    padding-top: 20px;
+  }
+  .frases_banner h2 span {
+    color: #226ed8;
+    font-weight: bold;
+  }
+  /* ===== */
+
+  /* Botões do Banner */
+  .botoes {
+    margin-top: 300px;
+  }
+
+  .botão-inscrição {
+    background: #226ed8;
+    border: 3px solid #226ed8;
+    border-radius: 25px;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+  }
+
+  .botão-inscrição:hover {
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.445);
+  }
+
+  .botão-edital {
+    padding: 10px 12px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #226ed8;
+  }
+  .botão-edital img {
+    padding-left: 8px;
+  }
+
+  .botão-edital:hover {
+    font-weight: bold;
+  }
+  /* =============== */
+  /* Sobre Nós */
+  .sobre {
+    width: 100%;
+    padding: 60px 0px;
+    margin-top: 100px;
+  }
+
+  .sobre h1 {
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 40px;
+    padding-left: 5%;
+  }
+
+  .sobre img {
+    height: auto;
+    width: 275px;
+    margin-left: 40px;
+    display: inline-block;
+    border: 1px solid white;
+    border-radius: 10px;
+  }
+  .sobre div {
+    display: block;
+    height: auto;
+    width: 400px;
+    border: 1px solid #f2f3f4;
+    border-radius: 5px;
+    background: #f2f3f4;
+    margin: -221px 0 0 310px;
+    padding: 27px 30px 20px 30px;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.089);
+  }
+
+  .sobre p {
+    opacity: 0.55;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  /* ======== */
+
+  /* Vagas */
+  .vagas {
+    padding: 30px 0;
+  }
+
+  .vagas h1 {
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 0;
+    padding-bottom: 10px;
+  }
+  .vagas img {
+    transform: scale(0.8);
+    display: inline-block;
+  }
+
+  .vagas li {
+    display: inline-block;
+    padding-top: 50px;
+    vertical-align: top;
+    padding: 5% 2%;
+    max-width: 45%;
+    text-align: center;
+  }
+
+  .vagas li h2 {
+    display: inline-block;
+    font-size: 20px;
+    color: #226ed8;
+    padding-bottom: 10px;
+    font-weight: bold;
+    padding-left: 5px;
+  }
+
+  .vagas li h2 span {
+    color: #3f3d5680;
+    padding-left: 7px;
+    font-weight: normal;
+    letter-spacing: 0px;
+  }
+
+  .vagas p {
+    padding: 0 5px;
+    font-size: 14px;
+    font-weight: lighter;
+    line-height: 22px;
+  }
+  /* ===== */
+
+  /* Break - Alumni */
+  .alumni {
+    width: 100%;
+    box-shadow: 0 -1px 1px rgba(128, 128, 128, 0.308);
+    padding: 70px 0;
+    z-index: 2;
+  }
+
+  .alumni h1 {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: bold;
+    padding-bottom: 40px;
+  }
+
+  .alumni img {
+    display: inline-block;
+    padding: 0 2%;
+    height: auto;
+    width: 15%;
+  }
+
+  .alumni img:hover {
+    transition: transform 0.2s;
+    transform: scale(1.2);
+  }
+  /* ============= */
+
+  /* Footer */
+  .footer {
+    width: 100%;
+    background: #171717;
+    padding: 65px 0 130px 0;
+  }
+
+  .footer nav {
+    width: 98px;
+    display: inline-block;
+    margin: 0;
+  }
+
+  .footer ul li {
+    display: inline-block;
+    padding: 0 5px;
+    transition: transform 0.2s;
+  }
+
+  .footer ul li:hover {
+    transform: scale(1.2);
+  }
+
+  .link {
+    display: inline-block;
+    text-decoration: none;
+    color: #fdfdfd;
+    opacity: 0.7;
+    font-size: 15px;
+    line-height: 22px;
+    margin: 0;
+    padding-left: 8px;
+  }
+
+  .icones {
+    width: 98px;
+    display: block;
+    text-align: center;
+    margin: 0;
+    left: 40%;
+    top: 0px;
+    position: absolute;
+  }
+  .icones img {
+    padding: 0 5px;
+  }
+  .contatos {
+    position: absolute;
+    right: 0;
+    top: 0px;
+    margin: 0;
+    display: block;
   }
   .contatos p {
     color: #fdfdfd;
