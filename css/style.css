@@ -4,9 +4,9 @@
   src: url(../fonts/Ubuntu/Ubuntu-Regular.ttf);
 }
 
-@font-face{
+@font-face {
   font-family: ubuntu_mono;
-  src: url(../fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf)
+  src: url(../fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf);
 }
 /* ====== */
 
@@ -38,15 +38,13 @@ body {
   font-family: ubuntu_mono;
   opacity: 0.5;
   font-size: 18px;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
   position: absolute;
   top: 24px;
   margin-left: 4px;
 }
 
-
 .header_menu {
-
   width: 40px;
   height: 150px;
   display: inline-block;
@@ -57,6 +55,7 @@ body {
 }
 
 .header_menu ul li {
+  text-align: center;
   padding: 8px 0;
   opacity: 0.8;
   display: block;
@@ -157,7 +156,6 @@ body {
   width: 100%;
   margin-top: 100px;
   padding: 60px 0;
-  background: tomato;
 }
 
 .sobre h1 {
@@ -171,11 +169,12 @@ body {
   border-radius: 10px;
 }
 
-.sobre_slide{
-  display:none;
+.sobre_slide {
+  display: none;
 }
 
-#prev, #next{
+#prev,
+#next {
   font-family: ubuntu_mono;
   cursor: pointer;
   position: absolute;
@@ -183,73 +182,93 @@ body {
   width: auto;
   color: rgb(255, 255, 255);
   font-weight: lighter;
-  font-size:50px;
-  transition: .6s ease;
+  font-size: 50px;
+  transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
-  user-select:none;
+  user-select: none;
+}
+#prev:hover,
+#next:hover {
+  transform: scale(1.1);
+  color: #226ed8;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.541);
 }
 
-#next{
+#prev {
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.61);
+}
+#next {
+  text-shadow: -2px 2px 3px rgba(0, 0, 0, 0.61);
   right: 845px;
   border-radius: 3px 0 0 3px;
 }
 
-
-.dot_container{
+.dot_container {
   display: block;
   margin: 0 0 0 150px;
-
 }
-.dot{
+.dot {
   text-align: center;
   cursor: pointer;
   height: 7px;
   width: 7px;
   margin: 0 2px;
-  background-color: white;
+  background-color: black;
   border-radius: 0.5em;
   display: inline-block;
-  transition: background-color .2s ease;
+  transition: background-color 0.2s ease;
 }
 
-.active, .dot:hover{
+.active {
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.384);
+}
+.active,
+.dot:hover {
   background-color: #226ed8;
 }
 
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
+  -webkit-animation-duration: 0.2s;
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 0.2s;
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+  }
 }
-/* .sobre div {
+#sobre_texto {
   border: 1px solid #f2f3f4;
   border-radius: 15px;
   background: #f2f3f4;
   width: 430px;
   height: 220px;
-  margin: -275px 0 0 332px;
+  margin: -292px 0 0 332px;
   padding: 50px 50px 0px 50px;
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.089);
 }
 
 .sobre p {
   opacity: 0.55;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: lighter;
   line-height: 25px;
-} */
+}
 /* ========= */
 
 /* Vagas */
