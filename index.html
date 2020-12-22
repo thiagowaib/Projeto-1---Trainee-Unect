@@ -18,7 +18,7 @@
       <!-- Logo e Título -->
       <a href="https://www.unect.com.br/"><img src="img/logos/unect.svg" alt="Unect"></a>
 
-      <h1>Processo Seletivo 2021</h1>
+      <h1>&nbsp&ltProcesso Seletivo 2021&gt</h1>
 
 
       <!-- Menu de Redes Sociais -->
@@ -51,9 +51,9 @@
   <!-- Botões do Banner -->
   <section class="botoes">
     <div class="container">
-      <a class="botão-inscrição" href="facebook.com">Inscreva-se
+      <a id="botão-inscrição" href="facebook.com">Inscreva-se
       </a>
-      <a class="botão-edital" href="edital.html">Edital<img src="img/icones/seta_direita.svg" alt=">">
+      <a id="botão-edital" href="edital.html">Edital<img src="img/icones/seta_direita.svg" alt=">">
       </a>
     </div>
   </section>
@@ -63,10 +63,32 @@
   <!-- Sobre Nós -->
   <section class="sobre container">
     <h1>Sobre nós</h1>
-    <img src="img/sobre.jpg" alt="Equipe">
+
+    <!-- Slides -->
     <div>
-      <p>A Unect Jr. é uma Empresa Júnior vinculada aos cursos de Computação da UTFPR-CP que desenvolve sites, aplicações mobile e web, e que busca, através da vivência empresarial, proporcionar aos seus membros o ambiente ideal para que eles se desenvolvam e apliquem os seus conhecimentos, que vão muito além da área de computação.</p>
+      <div class="sobre_slide fade">
+        <img src="img/sobre.jpg" alt="Equipe">
+      </div>
+      <div class="sobre_slide fade">
+        <img src="img/sobre_neg.jpg" alt="Equipe">
+      </div>
+  
+      <!-- Botões < e > -->
+      <a id="prev" onclick="plusSlide(-1)">&#10094;</a>
+      <a id="next" onclick="plusSlide(+1)">&#10095;</a>
+  
+      <!-- Marcadores -->
+      <div class="dot_container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+      </div>
     </div>
+    
+
+    <!-- Texto do Sobre -->
+    <!-- <div>
+      <p>A Unect Jr. é uma Empresa Júnior vinculada aos cursos de Computação da UTFPR-CP que desenvolve sites, aplicações mobile e web, e que busca, através da vivência empresarial, proporcionar aos seus membros o ambiente ideal para que eles se desenvolvam e apliquem os seus conhecimentos, que vão muito além da área de computação.</p>
+    </div> -->
   </section>
 
   <!-- Vagas -->
@@ -158,15 +180,12 @@
         </p>
 
       </div>
-
-
-
     </div>
-
   </footer>
 
 
-
+  <!-- Scripts Javascript -->
+  <script src="js/script.js"></script>
 </body>
 
 </html>

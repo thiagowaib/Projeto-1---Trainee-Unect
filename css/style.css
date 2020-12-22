@@ -4,6 +4,10 @@
   src: url(../fonts/Ubuntu/Ubuntu-Regular.ttf);
 }
 
+@font-face{
+  font-family: ubuntu_mono;
+  src: url(../fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf)
+}
 /* ====== */
 
 /* Estilos Gerais */
@@ -31,35 +35,36 @@ body {
 
 .header h1 {
   display: inline-block;
-  font-size: 16px;
+  font-family: ubuntu_mono;
+  opacity: 0.5;
+  font-size: 18px;
+  letter-spacing: .05em;
   position: absolute;
   top: 24px;
   margin-left: 4px;
 }
-.header h1:before {
-  content: "";
-  display: inline;
-  border: 1px solid rgb(0, 0, 0);
-  margin: auto 5px;
-}
+
 
 .header_menu {
-  width: 84px;
-  height: 20px;
+
+  width: 40px;
+  height: 150px;
   display: inline-block;
   margin-left: 93.2%;
   position: absolute;
-  top: 24px;
+  top: 180px;
   transition: opacity 0.5s;
 }
 
 .header_menu ul li {
-  display: inline-block;
-  padding: 0 3px;
+  padding: 8px 0;
+  opacity: 0.8;
+  display: block;
   transition: transform 0.2s;
 }
 
 .header_menu ul li:hover {
+  opacity: 1;
   transform: scale(1.2);
 }
 
@@ -114,32 +119,36 @@ body {
   margin-top: 300px;
 }
 
-.botão-inscrição {
+#botão-inscrição {
   background: #226ed8;
   border: 3px solid #226ed8;
   border-radius: 25px;
   padding: 10px 20px;
   text-decoration: none;
   font-size: 18px;
+  font-weight: bold;
   color: white;
 }
 
-.botão-inscrição:hover {
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.445);
+#botão-inscrição:hover {
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.137);
+  background: rgba(255, 255, 255, 0);
+  color: #226ed8;
+  cursor: pointer;
 }
 
-.botão-edital {
+#botão-edital {
   padding: 10px 12px;
   text-decoration: none;
   font-size: 18px;
   color: #226ed8;
 }
-.botão-edital img {
+#botão-edital img {
   padding-left: 8px;
 }
 
-.botão-edital:hover {
-  font-weight: bold;
+#botão-edital:hover {
+  cursor: pointer;
 }
 /* =============== */
 
@@ -148,6 +157,7 @@ body {
   width: 100%;
   margin-top: 100px;
   padding: 60px 0;
+  background: tomato;
 }
 
 .sobre h1 {
@@ -157,10 +167,73 @@ body {
 }
 
 .sobre img {
-  border: 1px solid white;
+  border: 1px solid rgba(255, 255, 255, 0);
   border-radius: 10px;
 }
-.sobre div {
+
+.sobre_slide{
+  display:none;
+}
+
+#prev, #next{
+  font-family: ubuntu_mono;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  color: rgb(255, 255, 255);
+  font-weight: lighter;
+  font-size:50px;
+  transition: .6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select:none;
+}
+
+#next{
+  right: 845px;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.dot_container{
+  display: block;
+  margin: 0 0 0 150px;
+
+}
+.dot{
+  text-align: center;
+  cursor: pointer;
+  height: 7px;
+  width: 7px;
+  margin: 0 2px;
+  background-color: white;
+  border-radius: 0.5em;
+  display: inline-block;
+  transition: background-color .2s ease;
+}
+
+.active, .dot:hover{
+  background-color: #226ed8;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/* .sobre div {
   border: 1px solid #f2f3f4;
   border-radius: 15px;
   background: #f2f3f4;
@@ -176,7 +249,7 @@ body {
   font-size: 16px;
   font-weight: lighter;
   line-height: 25px;
-}
+} */
 /* ========= */
 
 /* Vagas */
