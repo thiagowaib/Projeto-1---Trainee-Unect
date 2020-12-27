@@ -1,532 +1,530 @@
-@media only screen and (min-width: 769px) {
-  /* Fontes */
-  @font-face {
-    font-family: ubuntu;
-    src: url(../fonts/Ubuntu/Ubuntu-Regular.ttf);
-  }
-
-  @font-face {
-    font-family: ubuntu_mono;
-    src: url(../fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf);
-  }
-  /* ====== */
-
-  /* Estilos Gerais */
-  body {
-    font-family: ubuntu;
-  }
-
-  .container {
-    width: 87.1%;
-    max-width: 1190px;
-    margin: 0 auto;
-    padding: 0px;
-    position: relative;
-  }
-  /* ============= */
-
-  /* Header */
-  .header {
-    width: 100%;
-    height: 54px;
-    padding: 32px 0;
-    background: rgba(255, 253, 253, 0);
-    z-index: 2;
-  }
-
-  .header h1 {
-    display: inline-block;
-    font-family: ubuntu_mono;
-    opacity: 0.5;
-    font-size: 18px;
-    letter-spacing: 0.05em;
-    position: absolute;
-    top: 24px;
-    margin-left: 4px;
-  }
-
-  .header_menu {
-    width: 40px;
-    height: 150px;
-    display: inline-block;
-    margin-left: 93.2%;
-    position: absolute;
-    top: 180px;
-    transition: opacity 0.5s;
-  }
-
-  .header_menu ul li {
-    text-align: center;
-    padding: 8px 0;
-    opacity: 0.8;
-    display: block;
-    transition: transform 0.2s;
-  }
-
-  .header_menu ul li:hover {
-    opacity: 1;
-    transform: scale(1.2);
-  }
-
-  /* ===== */
-
-  /* Banner */
-
-  .banner_bg {
-    width: 100%;
-    height: 547px;
-    background-color: #226ed8;
-    position: absolute;
-    top: 0;
-    z-index: -2;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.123);
-  }
-  .banner {
-    width: 100%;
-    height: 554px;
-    background: url(../img/banner.jpg) center no-repeat;
-    position: absolute;
-    top: 0;
-    z-index: -1;
-  }
-
-  .frases_banner {
-    padding-top: 175px;
-  }
-  .frases_banner h1 {
-    font-size: 34px;
-    line-height: 48px;
-    padding-top: 5px;
-  }
-  .frases_banner h1 span {
-    font-weight: bold;
-  }
-
-  .frases_banner h2 {
-    color: rgba(0, 0, 0, 0.5);
-    font-size: 20px;
-    padding-top: 20px;
-    padding-bottom: 35px;
-  }
-  .frases_banner h2 span {
-    color: #226ed8;
-    font-weight: bold;
-  }
-  /* ===== */
-
-  /* Botões do Banner */
-  .botoes {
-    margin-top: 300px;
-  }
-
-  #botão-inscrição {
-    background: #226ed8;
-    border: 3px solid #226ed8;
-    border-radius: 25px;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-    transition: 0.2s;
-  }
-
-  #botão-inscrição:hover {
-    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.137);
-    background: rgba(255, 255, 255, 0);
-    color: #226ed8;
-    cursor: pointer;
-  }
-
-  #botão-edital {
-    padding: 10px 12px;
-    text-decoration: none;
-    font-size: 18px;
-    color: #226ed8;
-  }
-  #botão-edital img {
-    padding-left: 8px;
-  }
-
-  #botão-edital:hover {
-    cursor: pointer;
-  }
-  /* =============== */
-
-  /* Botão de Ajuda */
-  .ajuda {
-    pointer-events: auto;
-    position: fixed;
-    top: 590px;
-    right: -40px;
-  }
-  .ajuda img {
-    pointer-events: auto;
-    display: block;
-    scale: 1.3;
-    background: #000000;
-    padding: 6px;
-    border: 1px solid black;
-    border-radius: 1em;
-    z-index: 2;
-  }
-  .ajuda p {
-    pointer-events: auto;
-    transition: opacity 0.2s;
-    top: -37px;
-    right: 153px;
-    z-index: -1;
-    background: black;
-    position: relative;
-    color: white;
-    font-size: 16px;
-    line-height: 26px;
-    border: 6px solid black;
-    border-radius: 1em 0 0 1em;
-    padding: 2px 20px;
-  }
-
-  /* ============= */
-
-  /* Modal - Ajuda */
-  .modal {
-    width: 100%;
-    height: 100%;
-    display: none;
-    left: 0;
-    top: 0;
-    position: fixed;
-    animation-name: fade;
-    animation-duration: 0.2s;
-    background: #0000007c;
-    z-index: 2;
-  }
-
-  .modal_content {
-    width: 400px;
-    margin: 100px auto 0 auto;
-  }
-
-  .modal_header {
-    background: #cecece;
-    padding: 30px 0px;
-    border: 1px solid #cecece;
-    border-radius: 10px 10px 0 0;
-  }
-
-  .modal_header h2 {
-    padding-left: 30px;
-    color: #226ed8;
-    font-size: 26px;
-  }
-
-  .modal form {
-    margin-top: -10px;
-    background: white;
-    border: 1px solid white;
-    border-radius: 0 0 10px 10px;
-    padding: 30px 0 20px 30px;
-  }
-
-  .modal form label {
-    font-size: 16px;
-    opacity: 0.8;
-  }
-
-  .modal form input {
-    font-size: 16px;
-    width: 300px;
-    border: 1px solid #b8b8b8;
-    border-radius: 3px;
-    text-decoration: none;
-    box-shadow: none;
-    margin: 5px 0 10px 0;
-  }
-
-  .modal form textarea {
-    font-size: 16px;
-    width: 300px;
-    max-width: 300px;
-    min-width: 300px;
-    min-height: 50px;
-    max-height: 150px;
-    border: 1px solid #b8b8b8;
-    border-radius: 3px;
-    text-decoration: none;
-    box-shadow: none;
-    margin: 5px 0 10px 0;
-    overflow: auto;
-  }
-
-  .modal form input:focus,
-  .modal form textarea:focus {
-    box-shadow: 0px 2px 3px #226ed86b;
-  }
-
-  .modal .botão_form {
-    background: rgba(255, 255, 255, 0);
-    padding: 2px 5px;
-    border: 1px solid rgba(255, 255, 255, 0);
-    transition: transform 0.2s;
-  }
-  .modal .botão_form:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-  }
-
-  .modal #cancelar {
-    margin-left: 150px;
-  }
-  .modal #enviar {
-    margin-left: 20px;
-  }
-
-  /* ============ */
-
-  /* Sobre Nós */
-  .sobre {
-    max-width: 1000px;
-    margin-left: 100px;
-    margin-top: 100px;
-    padding: 60px 0;
-  }
-
-  .sobre h1 {
-    font-size: 30px;
-    font-weight: bold;
-    padding-bottom: 40px;
-  }
-
-  .sobre img {
-    border: 1px solid rgba(255, 255, 255, 0);
-    border-radius: 10px 0 0 10px;
-  }
-
-  .sobre_slide {
-    display: none;
-  }
-  #prev,
-  #next {
-    font-family: ubuntu_mono;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    color: rgb(255, 255, 255);
-    font-weight: lighter;
-    font-size: 50px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
-  #prev:hover,
-  #next:hover {
-    transform: scale(1.1);
-    color: #226ed8;
-    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.541);
-  }
-
-  #prev {
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.61);
-  }
-  #next {
-    text-shadow: -2px 2px 3px rgba(0, 0, 0, 0.61);
-    right: 655px;
-    border-radius: 3px 0 0 3px;
-  }
-
-  .dot_container {
-    display: block;
-    margin: 0 0 0 150px;
-  }
-  .dot {
-    text-align: center;
-    cursor: pointer;
-    height: 7px;
-    width: 7px;
-    margin: 0 2px;
-    background-color: black;
-    border-radius: 0.5em;
-    display: inline-block;
-    transition: background-color 0.2s ease;
-  }
-
-  .active {
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.384);
-  }
-  .active,
-  .dot:hover {
-    background-color: #226ed8;
-  }
-
-  /* Fading animation */
-  .fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 0.2s;
-    animation-name: fade;
-    animation-duration: 0.2s;
-  }
-
-  @-webkit-keyframes fade {
-    from {
-      opacity: 0.7;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
-  @keyframes fade {
-    from {
-      opacity: 0.7;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  #sobre_texto {
-    border: 1px solid #f2f3f4;
-    border-radius: 0 15px 15px 0;
-    background: #f2f3f4;
-    width: 430px;
-    height: 220px;
-    margin: -292px 0 0 332px;
-    padding: 50px 50px 0px 50px;
-    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.089);
-  }
-
-  .sobre p {
-    opacity: 0.55;
-    font-size: 18px;
-    font-weight: lighter;
-    line-height: 25px;
-  }
-  /* ========= */
-
-  /* Vagas */
-  .vagas {
-    position: relative;
-    z-index: -4;
-    padding: 30px 0;
-  }
-
-  .vagas h1 {
-    font-size: 30px;
-    font-weight: bold;
-  }
-
-  .vagas li {
-    display: inline-block;
-    padding-right: 5%;
-    padding-top: 40px;
-    vertical-align: top;
-    max-width: 330px;
-  }
-
-  .vagas li h2 {
-    display: inline-block;
-    font-size: 22px;
-    color: #226ed8;
-    padding-left: 10px;
-    padding-bottom: 20px;
-    font-weight: bold;
-  }
-
-  .vagas li h2 span {
-    color: #3f3d5680;
-    padding-left: 10px;
-    font-weight: normal;
-  }
-
-  .vagas p {
-    font-size: 16px;
-    font-weight: lighter;
-    line-height: 24px;
-  }
-  /* ===== */
-
-  /* Break - Alumni */
-  .alumni {
-    position: relative;
-    z-index: -2;
-    width: 100%;
-    box-shadow: 0 -1px 1px rgba(128, 128, 128, 0.308);
-    padding: 70px 0;
-  }
-
-  .alumni h1 {
-    font-size: 28px;
-    line-height: 36px;
-    font-weight: bold;
-    padding-bottom: 52px;
-  }
-
-  .alumni img {
-    vertical-align: middle;
-    padding-right: 5.5%;
-  }
-
-  /* ============= */
-
-  /* Footer */
-  .footer {
-    position: relative;
-    width: 100%;
-    background: #171717;
-    padding: 65px 0 130px 0;
-  }
-  .footer nav {
-    width: 100px;
-    display: inline-block;
-  }
-
-  .footer ul li {
-    display: inline-block;
-    padding: 0 5px;
-    transition: transform 0.2s;
-  }
-
-  .footer ul li:hover {
-    transform: scale(1.2);
-  }
-
-  .link {
-    display: inline-block;
-    text-decoration: none;
-    color: #fdfdfd;
-    opacity: 0.7;
-    font-size: 15px;
-    line-height: 26px;
-    padding-left: 20px;
-  }
-
-  .icones {
-    width: 100px;
-    position: absolute;
-    left: 40%;
-    top: 0;
-    display: inline-block;
-    text-align: center;
-  }
-  .icones img {
-    padding: 0 5px;
-  }
-  .contatos {
-    position: absolute;
-    right: 0;
-    top: 0px;
-    margin: 0;
-    display: block;
-  }
-  .contatos p {
-    color: #fdfdfd;
-    opacity: 0.7;
-    font-size: 15px;
-    line-height: 26px;
-  }
-
-  .contatos p img {
-    padding-bottom: 3px;
-  }
-  /* ===== */
+/* Fontes */
+@font-face {
+  font-family: ubuntu;
+  src: url(../fonts/Ubuntu/Ubuntu-Regular.ttf);
 }
+
+@font-face {
+  font-family: ubuntu_mono;
+  src: url(../fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf);
+}
+/* ====== */
+
+/* Estilos Gerais */
+body {
+  font-family: ubuntu;
+}
+
+.container {
+  width: 87.1%;
+  max-width: 1190px;
+  margin: 0 auto;
+  padding: 0px;
+  position: relative;
+}
+/* ============= */
+
+/* Header */
+.header {
+  width: 100%;
+  height: 54px;
+  padding: 32px 0;
+  background: rgba(255, 253, 253, 0);
+  z-index: 2;
+}
+
+.header h1 {
+  display: inline-block;
+  font-family: ubuntu_mono;
+  opacity: 0.5;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  position: absolute;
+  top: 24px;
+  margin-left: 4px;
+}
+
+.header_menu {
+  width: 40px;
+  height: 150px;
+  display: inline-block;
+  margin-left: 93.2%;
+  position: absolute;
+  top: 180px;
+  transition: opacity 0.5s;
+}
+
+.header_menu ul li {
+  text-align: center;
+  padding: 8px 0;
+  opacity: 0.8;
+  display: block;
+  transition: transform 0.2s;
+}
+
+.header_menu ul li:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* ===== */
+
+/* Banner */
+
+.banner_bg {
+  width: 100%;
+  height: 547px;
+  background-color: #226ed8;
+  position: absolute;
+  top: 0;
+  z-index: -2;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.123);
+}
+.banner {
+  width: 100%;
+  height: 554px;
+  background: url(../img/banner.jpg) center no-repeat;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.frases_banner {
+  padding-top: 175px;
+}
+.frases_banner h1 {
+  font-size: 34px;
+  line-height: 48px;
+  padding-top: 5px;
+}
+.frases_banner h1 span {
+  font-weight: bold;
+}
+
+.frases_banner h2 {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 35px;
+}
+.frases_banner h2 span {
+  color: #226ed8;
+  font-weight: bold;
+}
+/* ===== */
+
+/* Botões do Banner */
+.botoes {
+  margin-top: 300px;
+}
+
+#botão-inscrição {
+  background: #226ed8;
+  border: 3px solid #226ed8;
+  border-radius: 25px;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  transition: 0.2s;
+}
+
+#botão-inscrição:hover {
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.137);
+  background: rgba(255, 255, 255, 0);
+  color: #226ed8;
+  cursor: pointer;
+}
+
+#botão-edital {
+  padding: 10px 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #226ed8;
+}
+#botão-edital img {
+  padding-left: 8px;
+}
+
+#botão-edital:hover {
+  cursor: pointer;
+}
+/* =============== */
+
+/* Botão de Ajuda */
+.ajuda {
+  pointer-events: auto;
+  position: fixed;
+  top: 590px;
+  right: -40px;
+}
+.ajuda img {
+  pointer-events: auto;
+  display: block;
+  scale: 1.3;
+  background: #000000;
+  padding: 6px;
+  border: 1px solid black;
+  border-radius: 1em;
+  z-index: 2;
+}
+.ajuda p {
+  pointer-events: auto;
+  transition: opacity 0.2s;
+  top: -37px;
+  right: 153px;
+  z-index: -1;
+  background: black;
+  position: relative;
+  color: white;
+  font-size: 16px;
+  line-height: 26px;
+  border: 6px solid black;
+  border-radius: 1em 0 0 1em;
+  padding: 2px 20px;
+}
+
+/* ============= */
+
+/* Modal - Ajuda */
+.modal {
+  width: 100%;
+  height: 100%;
+  display: none;
+  left: 0;
+  top: 0;
+  position: fixed;
+  animation-name: fade;
+  animation-duration: 0.2s;
+  background: #0000007c;
+  z-index: 2;
+}
+
+.modal_content {
+  width: 400px;
+  margin: 100px auto 0 auto;
+}
+
+.modal_header {
+  background: #cecece;
+  padding: 30px 0px;
+  border: 1px solid #cecece;
+  border-radius: 10px 10px 0 0;
+}
+
+.modal_header h2 {
+  padding-left: 30px;
+  color: #226ed8;
+  font-size: 26px;
+}
+
+.modal form {
+  margin-top: -10px;
+  background: white;
+  border: 1px solid white;
+  border-radius: 0 0 10px 10px;
+  padding: 30px 0 20px 30px;
+}
+
+.modal form label {
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+.modal form input {
+  font-size: 16px;
+  width: 300px;
+  border: 1px solid #b8b8b8;
+  border-radius: 3px;
+  text-decoration: none;
+  box-shadow: none;
+  margin: 5px 0 10px 0;
+}
+
+.modal form textarea {
+  font-size: 16px;
+  width: 300px;
+  max-width: 300px;
+  min-width: 300px;
+  min-height: 50px;
+  max-height: 150px;
+  border: 1px solid #b8b8b8;
+  border-radius: 3px;
+  text-decoration: none;
+  box-shadow: none;
+  margin: 5px 0 10px 0;
+  overflow: auto;
+}
+
+.modal form input:focus,
+.modal form textarea:focus {
+  box-shadow: 0px 2px 3px #226ed86b;
+}
+
+.modal .botão_form {
+  background: rgba(255, 255, 255, 0);
+  padding: 2px 5px;
+  border: 1px solid rgba(255, 255, 255, 0);
+  transition: transform 0.2s;
+}
+.modal .botão_form:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.modal #cancelar {
+  margin-left: 150px;
+}
+.modal #enviar {
+  margin-left: 20px;
+}
+
+/* ============ */
+
+/* Sobre Nós */
+.sobre {
+  max-width: 1000px;
+  margin-left: 100px;
+  margin-top: 100px;
+  padding: 60px 0;
+}
+
+.sobre h1 {
+  font-size: 30px;
+  font-weight: bold;
+  padding-bottom: 40px;
+}
+
+.sobre img {
+  border: 1px solid rgba(255, 255, 255, 0);
+  border-radius: 10px 0 0 10px;
+}
+
+.sobre_slide {
+  display: none;
+}
+#prev,
+#next {
+  font-family: ubuntu_mono;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  color: rgb(255, 255, 255);
+  font-weight: lighter;
+  font-size: 50px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+#prev:hover,
+#next:hover {
+  transform: scale(1.1);
+  color: #226ed8;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.541);
+}
+
+#prev {
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.61);
+}
+#next {
+  text-shadow: -2px 2px 3px rgba(0, 0, 0, 0.61);
+  right: 655px;
+  border-radius: 3px 0 0 3px;
+}
+
+.dot_container {
+  display: block;
+  margin: 0 0 0 150px;
+}
+.dot {
+  text-align: center;
+  cursor: pointer;
+  height: 7px;
+  width: 7px;
+  margin: 0 2px;
+  background-color: black;
+  border-radius: 0.5em;
+  display: inline-block;
+  transition: background-color 0.2s ease;
+}
+
+.active {
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.384);
+}
+.active,
+.dot:hover {
+  background-color: #226ed8;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 0.2s;
+  animation-name: fade;
+  animation-duration: 0.2s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#sobre_texto {
+  border: 1px solid #f2f3f4;
+  border-radius: 0 15px 15px 0;
+  background: #f2f3f4;
+  width: 430px;
+  height: 220px;
+  margin: -292px 0 0 332px;
+  padding: 50px 50px 0px 50px;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.089);
+}
+
+.sobre p {
+  opacity: 0.55;
+  font-size: 18px;
+  font-weight: lighter;
+  line-height: 25px;
+}
+/* ========= */
+
+/* Vagas */
+.vagas {
+  position: relative;
+  z-index: -4;
+  padding: 30px 0;
+}
+
+.vagas h1 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.vagas li {
+  display: inline-block;
+  padding-right: 5%;
+  padding-top: 40px;
+  vertical-align: top;
+  max-width: 330px;
+}
+
+.vagas li h2 {
+  display: inline-block;
+  font-size: 22px;
+  color: #226ed8;
+  padding-left: 10px;
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+
+.vagas li h2 span {
+  color: #3f3d5680;
+  padding-left: 10px;
+  font-weight: normal;
+}
+
+.vagas p {
+  font-size: 16px;
+  font-weight: lighter;
+  line-height: 24px;
+}
+/* ===== */
+
+/* Break - Alumni */
+.alumni {
+  position: relative;
+  z-index: -2;
+  width: 100%;
+  box-shadow: 0 -1px 1px rgba(128, 128, 128, 0.308);
+  padding: 70px 0;
+}
+
+.alumni h1 {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: bold;
+  padding-bottom: 52px;
+}
+
+.alumni img {
+  vertical-align: middle;
+  padding-right: 5.5%;
+}
+
+/* ============= */
+
+/* Footer */
+.footer {
+  position: relative;
+  width: 100%;
+  background: #171717;
+  padding: 65px 0 130px 0;
+}
+.footer nav {
+  width: 100px;
+  display: inline-block;
+}
+
+.footer ul li {
+  display: inline-block;
+  padding: 0 5px;
+  transition: transform 0.2s;
+}
+
+.footer ul li:hover {
+  transform: scale(1.2);
+}
+
+.link {
+  display: inline-block;
+  text-decoration: none;
+  color: #fdfdfd;
+  opacity: 0.7;
+  font-size: 15px;
+  line-height: 26px;
+  padding-left: 20px;
+}
+
+.icones {
+  width: 100px;
+  position: absolute;
+  left: 40%;
+  top: 0;
+  display: inline-block;
+  text-align: center;
+}
+.icones img {
+  padding: 0 5px;
+}
+.contatos {
+  position: absolute;
+  right: 0;
+  top: 0px;
+  margin: 0;
+  display: block;
+}
+.contatos p {
+  color: #fdfdfd;
+  opacity: 0.7;
+  font-size: 15px;
+  line-height: 26px;
+}
+
+.contatos p img {
+  padding-bottom: 3px;
+}
+/* ===== */
