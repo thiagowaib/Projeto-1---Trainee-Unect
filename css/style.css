@@ -171,7 +171,7 @@ body {
 .ajuda p {
   pointer-events: auto;
   transition: opacity 0.2s;
-  top: -35px;
+  top: -37px;
   right: 153px;
   z-index: -1;
   background: black;
@@ -180,8 +180,8 @@ body {
   font-size: 16px;
   line-height: 26px;
   border: 6px solid black;
-  border-radius: 1em;
-  padding: 0 20px;
+  border-radius: 1em 0 0 1em;
+  padding: 2px 20px;
 }
 
 /* ============= */
@@ -297,7 +297,7 @@ body {
 
 .sobre img {
   border: 1px solid rgba(255, 255, 255, 0);
-  border-radius: 10px;
+  border-radius: 10px 0 0 10px;
 }
 
 .sobre_slide {
@@ -384,7 +384,7 @@ body {
 }
 #sobre_texto {
   border: 1px solid #f2f3f4;
-  border-radius: 15px;
+  border-radius: 0 15px 15px 0;
   background: #f2f3f4;
   width: 430px;
   height: 220px;
