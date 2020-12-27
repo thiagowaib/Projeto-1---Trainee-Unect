@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/responsivo.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Processo Seletivo Unect</title>
+  <title>Processo Seletivo - Unect</title>
 </head>
 
 <body>
@@ -58,7 +58,46 @@
     </div>
   </section>
 
+  <!-- Botão de Ajuda -->
+  <div class="ajuda">
+    <img src="img/icones/ajuda.svg" alt="Ajuda">
+    <p>
+      Envie sua dúvida
+    </p>
+  </div>
 
+  <!-- Modal de Ajuda - Formulário -->
+  <section class="modal">
+    <div class="modal_content">
+      <div class="modal_header">
+        <h2>Pergunta pra gente 😊</h2>
+      </div>
+
+      <form action="js/enviar_formulario.js" method="post" name="Ajuda">
+
+        <div>
+          <label for="nome">Nome<br></label>
+          <input class="form_texto" type="text" name="nome" required>
+        </div>
+        <div>
+          <label for="email">Email<br></label>
+          <input class="form_texto" type="email" name="email" placeholder="exemplo@email.com" required>
+        </div>
+        <div>
+          <label for="mensagem">Mensagem<br></label>
+          <textarea class="form_texto" type="text" name="mensagem" rows="5" required></textarea>
+        </div>
+        <button type="reset" class="botão_form" id="cancelar">
+          Cancelar
+        </button>
+        <button class="botão_form" id="enviar">
+          Enviar
+        </button>
+
+      </form>
+    </div>
+
+  </section>
 
   <!-- Sobre Nós -->
   <section class="sobre container">
