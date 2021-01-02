@@ -197,7 +197,7 @@ body {
   position: fixed;
   animation-name: fade;
   animation-duration: 0.2s;
-  background: #0000007c;
+  background: #424242a4;
   z-index: 2;
 }
 
@@ -207,9 +207,9 @@ body {
 }
 
 .modal_header {
-  background: #cecece;
+  background: #ececec;
   padding: 30px 0px;
-  border: 1px solid #cecece;
+  border: 1px solid#ececec;
   border-radius: 10px 10px 0 0;
 }
 
@@ -240,6 +240,7 @@ body {
   text-decoration: none;
   box-shadow: none;
   margin: 5px 0 10px 0;
+  padding: 3px;
 }
 
 .modal form textarea {
@@ -255,6 +256,7 @@ body {
   box-shadow: none;
   margin: 5px 0 10px 0;
   overflow: auto;
+  padding: 5px;
 }
 
 .modal form input:focus,
@@ -502,7 +504,7 @@ body {
 .icones {
   width: 100px;
   position: absolute;
-  left: 40%;
+  left: 45%;
   top: 0;
   display: inline-block;
   text-align: center;

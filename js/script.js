@@ -19,7 +19,6 @@ btnEdital.addEventListener("mouseout", hoverEdital_out);
 
 // Slide de imagens do Sobre
 let slideIndex = 1;
-
 function showSlides(num)
 {
     let i;
